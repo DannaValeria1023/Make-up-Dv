@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,64 @@
     <link rel="icon" type="image/x-icon" href="img/mk.png">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
- 
 </head>
 
 <body>
+    <!-- Menú de navegación -->
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios y productos </a></li>
+            <li><a href="servicios.html">Servicios y productos</a></li>
             <li><a href="reseñas.html">Reseñas</a></li>
         </ul>
     </nav>
 
-    <h1>Registro de Usuarios</h1>
-    <form id="registrationForm">
-        <label for="nombres">Nombres:</label>
-        <input type="text" id="nombres" name="nombres" required>
+    <!-- Menú de navegación de usuario -->
+    <nav id="userNav" style="display:none;">
+        <ul>
+            <li><span id="userName"></span></li>
+            <li><a href="#" onclick="logoutUser()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
 
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" required>
+    <div id="registrationPage">
+        <h1>Registro de Usuarios</h1>
+        <form id="registrationForm">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required>
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="genero">Género:</label>
-        <select id="genero" name="genero" required>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-        </select>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
 
-        <button type="button" onclick="registerUser()">Registrarse</button>
-    </form>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <button type="button" onclick="registerUser()">Registrarse</button>
+        </form>
+    </div>
+
+    <div id="loginPage" style="display:none;">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+            <label for="loginEmail">Correo electrónico:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="button" onclick="loginUser()">Iniciar Sesión</button>
+        </form>
+    </div>
 
     <script>
         function registerUser() {
@@ -54,31 +78,93 @@
                 genero: document.getElementById('genero').value
             };
 
+            // Validar correo electrónico
+            if (!isValidEmail(userData.email)) {
+                alert('Ingrese un correo electrónico válido.');
+                return;
+            }
+
             // Almacenar datos en localStorage
             localStorage.setItem('userData', JSON.stringify(userData));
 
             // Mostrar mensaje de registro exitoso
             mostrarMensaje();
+        }
 
-            // Mostrar datos almacenados en la consola
-            console.log('Datos almacenados en localStorage:', localStorage.getItem('userData'));
+        function isValidEmail(email) {
+            // Validar el formato del correo electrónico
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function loginUser() {
+            // Obtener datos almacenados en localStorage
+            const storedUserData = localStorage.getItem('userData');
+
+            // Obtener datos del formulario de inicio de sesión
+            const loginEmail = document.getElementById('loginEmail').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+
+            if (storedUserData) {
+                // Convertir los datos a objeto
+                const userData = JSON.parse(storedUserData);
+
+                // Verificar credenciales
+                if (userData.email === loginEmail && userData.password === loginPassword) {
+                    // Mostrar el nombre del usuario en el menú de navegación
+                    document.getElementById('userName').textContent = `${userData.nombres} ${userData.apellidos}`;
+                    document.getElementById('userNav').style.display = 'block';
+
+                    // Ocultar las páginas de registro e inicio de sesión
+                    document.getElementById('registrationPage').style.display = 'none';
+                    document.getElementById('loginPage').style.display = 'none';
+
+                    // Mostrar mensaje de inicio de sesión exitoso
+                    alert('Inicio de sesión exitoso');
+                } else {
+                    alert('Credenciales incorrectas');
+                }
+            } else {
+                alert('No hay usuario registrado');
+            }
+        }
+
+        function logoutUser() {
+            // Restablecer el menú de navegación
+            document.getElementById('userNav').style.display = 'none';
+
+            // Mostrar las páginas de registro e inicio de sesión
+            document.getElementById('registrationPage').style.display = 'block';
+            document.getElementById('loginPage').style.display = 'block';
+
+            // Eliminar los datos almacenados en localStorage
+            localStorage.removeItem('userData');
+
+            // Limpiar los campos de inicio de sesión
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+
+            alert('Sesión cerrada');
+
+            // Redirigir al index
+            window.location.href = "index.html";
         }
 
         function mostrarMensaje() {
             alert("Usted ha sido registrado exitosamente.");
 
-            // Limpiar los campos del formulario
-            document.getElementById('nombres').value = '';
-            document.getElementById('apellidos').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('password').value = '';
-            document.getElementById('genero').value = '';
+            // Redirigir a la página de inicio de sesión
+            redirectLogin();
+        }
 
-            // Esperar 5 segundos y luego redirigir a index.html
-            setTimeout(function() {
-                window.location.href = "index.html";
-            }, 5000);
+        function redirectLogin() {
+            // Ocultar la página de registro
+            document.getElementById('registrationPage').style.display = 'none';
+
+            // Mostrar la página de inicio de sesión
+            document.getElementById('loginPage').style.display = 'block';
         }
     </script>
 </body>
+
 </html>
