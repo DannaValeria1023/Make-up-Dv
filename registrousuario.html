@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKE UP DV</title>
+    <link rel="icon" type="image/x-icon" href="img/mk.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+ 
+</head>
+
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios y productos </a></li>
+            <li><a href="reseñas.html">Reseñas</a></li>
+        </ul>
+    </nav>
+
+    <h1>Registro de Usuarios</h1>
+    <form id="registrationForm">
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <button type="button" onclick="registerUser()">Registrarse</button>
+    </form>
+
+    <script>
+        function registerUser() {
+            // Obtener datos del formulario
+            const userData = {
+                nombres: document.getElementById('nombres').value,
+                apellidos: document.getElementById('apellidos').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                genero: document.getElementById('genero').value
+            };
+
+            // Almacenar datos en localStorage
+            localStorage.setItem('userData', JSON.stringify(userData));
+
+            // Mostrar mensaje de registro exitoso
+            mostrarMensaje();
+
+            // Mostrar datos almacenados en la consola
+            console.log('Datos almacenados en localStorage:', localStorage.getItem('userData'));
+        }
+
+        function mostrarMensaje() {
+            alert("Usted ha sido registrado exitosamente.");
+
+            // Limpiar los campos del formulario
+            document.getElementById('nombres').value = '';
+            document.getElementById('apellidos').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('genero').value = '';
+
+            // Esperar 5 segundos y luego redirigir a index.html
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

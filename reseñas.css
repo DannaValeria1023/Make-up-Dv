@@ -1,0 +1,351 @@
+* Estilos generales */
+body {
+    margin: 1cm;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px; /* Agrega un margen superior para evitar que el menú lo tape */
+}
+.registro-btn {
+    float: right;
+  padding: 10px 15px;
+  background-color: #daaed4;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: 'Parisienne', cursive;
+  margin-top: 5px; /* Ajusta el margen superior según sea necesario */
+
+}
+
+/* Estilos para el encabezado principal */
+.main-heading {
+  font-family: 'Parisienne', cursive;
+      font-size: 36px; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Ajusta el margen superior */
+  color: #000000; /* Color del texto */
+}
+
+
+/* Estilizando el menú de navegación */
+
+/* Estilos para el menú de navegación */
+nav {
+  font-family: Parisienne, cursive;
+    background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* Estilos para los elementos de la lista de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-family: 'Parisienne', cursive; /* Añadido para aplicar la fuente */
+}
+
+nav a:hover {
+  color: #beffc7;
+}
+
+
+/* Estilizando el logotipo de la empresa en el menú */
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #000000;
+}
+
+/* Estilizando el carrusel de imágenes en el banner */
+.banner-slider {
+  width: 100%;
+  max-height: 350px; /* Establece una altura máxima */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Evita que las imágenes se desborden en pantallas pequeñas */
+  background-color: #b4afb0; /* Color de fondo rosado pastel */
+}
+
+/* Estilizando los botones de navegación del carrusel Slick */
+.slick-prev,
+.slick-next {
+  font-size: 0; /* Oculta el texto dentro de los botones */
+  background-color: rgb(0, 0, 0); /* Fondo transparente */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #080606;
+}
+/*SERVICIOSSSSSSSSSS*/
+/* Estilos generales */
+body {
+  margin: 1cm;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px; /* Agrega un margen superior para evitar que el menú lo tape */
+}
+
+/* Estilos para el encabezado principal */
+.main-heading {
+  font-family: 'Parisienne', cursive;
+  font-size: 36px; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Ajusta el margen superior */
+  color: #000000; /* Color del texto */
+}
+
+/* Estilizando el menú de navegación */
+nav {
+  font-family: 'Abril Fatface', serif;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #beffc7;
+}
+
+/* Estilizando el logotipo de la empresa en el menú */
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #000000;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: 'Abril Fatface', serif;
+}
+
+/* Estilos para la información de contacto y las redes sociales */
+.contact-info, .social-links {
+  text-align: right;
+}
+
+/* Estilos para los íconos en la información de contacto y las redes sociales */
+.contact-info i, .social-links i {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Estilos para los enlaces en la información de contacto y las redes sociales */
+.contact-info a, .social-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+/* RESEÑAAAAAAAAAAAS*/
+/* Estilos para la sección de reseñas de clientes */
+.main-heading {
+    font-family: 'Parisienne', cursive;
+    font-size: 36px; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Ajusta el margen superior */
+    color: #000000; /* Color del texto */
+  }
+  
+  .reseñas {
+    font-family:  'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .reseña {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .nombre {
+    font-weight: bold;
+  }
+  
+  .puntuación {
+    color: #daaed4; 
+    font-weight: bold;
+  }
+  
+  .formulario {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .formulario h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .formulario button {
+    background-color: #daaed4;
+    color: #000000;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .formulario button:hover {
+    background-color: #daaed4;
+  }
+  /*REGISTRO USUARIOS*/
+  h1 {
+    font-family: 'Parisienne', cursive;
+  
+    text-align: center;
+    color: #333;
+  }
+  
+  #registrationForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    background-color: #daaed4;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #daaed4;
+  }
+  
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Color de fondo igual al del menú */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Abril Fatface', serif;
+  
+  }
+  /* Estilos para la información de contacto y las redes sociales */
+  .contact-info, .social-links {
+    text-align: right; /* Alinea a la derecha */
+  }
+  
+  /* Estilos para los íconos en la información de contacto y las redes sociales */
+  .contact-info i, .social-links i {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ffffff; /* Cambia el color a blanco */
+    font-size: 20px; /* Aumenta el tamaño de fuente */
+    margin-left: 10px; /* Aumenta el espacio entre los íconos y el texto */
+  }
+  
+  /* Estilos para los enlaces en la información de contacto y las redes sociales */
+  .contact-info a, .social-links a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ffffff; /* Cambia el color a blanco */
+    font-size: 20px; /* Aumenta el tamaño de fuente */
+    margin-left: 10px; /* Aumenta el espacio entre los íconos y el texto */
+  }

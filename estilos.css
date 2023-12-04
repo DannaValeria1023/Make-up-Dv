@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+    margin: 1cm;
+  font-family: 'Arial', sans-serif;.banner-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-slide {
+  flex: 1;
+  text-align: center;
+}
+  margin: 0;
+  padding: 0;
+  margin-top: 70px; /* Agrega un margen superior para evitar que el menú lo tape */
+}
+.registro-btn {
+    float: right;
+  padding: 10px 15px;
+  background-color: #daaed4;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: 'Parisienne', cursive;
+  margin-top: 5px; /* Ajusta el margen superior según sea necesario */
+
+}
+
+.banner-slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-slide {
+  flex: 1;
+  text-align: center;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el encabezado principal */
+.main-heading {
+  font-family: 'Parisienne', cursive;
+      font-size: 36px; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Ajusta el margen superior */
+  color: #000000; /* Color del texto */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+  font-family: Parisienne, cursive;
+    background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* Estilos para los elementos de la lista de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  font-family: 'Parisienne', cursive; /* Añadido para aplicar la fuente */
+}
+
+nav a:hover {
+  color: #beffc7;
+}
+
+
+/* Estilizando el logotipo de la empresa en el menú */
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #000000;
+}
+
+
+
+
+/* Estilos para la sección "Quiénes Somos" */
+#quienes-somos {
+  font-family: 'Neuton', serif;
+  background-color: #fff; /* Color de fondo blanco hueso */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.quienes-somos-content {
+  font-family: 'Neuton', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s ease; /* Agrega una transición suave al contenido */
+}
+
+.quienes-somos-text {
+  flex: 1;
+  margin-top: -20px; /* Ajusta el margen superior negativo para subir el texto */
+}
+
+.quienes-somos-img {
+  flex: 1;
+  text-align: right; /* Alinea la imagen a la derecha */
+}
+
+.quienes-somos-img img {
+  max-width: 100%; /* Asegura que la imagen no se desborde */
+  border-radius: 55%; /* Hace que la imagen sea circular */
+  width: 15cm; /* Ajusta el ancho de la imagen */
+  height: 15cm; /* Deja que la altura se ajuste automáticamente */
+}
+
+/* Estilos adicionales para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .quienes-somos-content {
+      flex-direction: column; /* Apila el contenido en pantallas pequeñas */
+      text-align: center;
+  }
+
+  .quienes-somos-text,
+  .quienes-somos-text {
+      flex: 1;
+      margin-top: -5cm; /* Ajusta el margen superior negativo para subir el texto 5 cm */
+  }
+  
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333; /* Color de fondo igual al del menú */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: 'Abril Fatface', serif;
+
+}
+/* Estilos para la información de contacto y las redes sociales */
+.contact-info, .social-links {
+  text-align: right; /* Alinea a la derecha */
+}
+
+/* Estilos para los íconos en la información de contacto y las redes sociales */
+.contact-info i, .social-links i {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #ffffff; /* Cambia el color a blanco */
+  font-size: 20px; /* Aumenta el tamaño de fuente */
+  margin-left: 10px; /* Aumenta el espacio entre los íconos y el texto */
+}
+
+/* Estilos para los enlaces en la información de contacto y las redes sociales */
+.contact-info a, .social-links a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #ffffff; /* Cambia el color a blanco */
+  font-size: 20px; /* Aumenta el tamaño de fuente */
+  margin-left: 10px; /* Aumenta el espacio entre los íconos y el texto */
+}
+
+
+
+
