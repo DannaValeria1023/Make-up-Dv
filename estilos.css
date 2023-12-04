@@ -11,7 +11,7 @@ body {
 }
   margin: 0;
   padding: 0;
-  margin-top: 70px; /* Agrega un margen superior para evitar que el menú lo tape */
+  margin-top: 70px; 
 }
 .registro-btn {
     float: right;
